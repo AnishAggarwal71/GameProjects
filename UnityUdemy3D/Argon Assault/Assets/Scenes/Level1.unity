@@ -164,10 +164,6 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 724824869}
-    - target: {fileID: 639990430, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 4529216016204429046, guid: e5979c711c36aa44c9d3d5550fe594c7, type: 3}
     - target: {fileID: 1906374043378120, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
       propertyPath: m_Name
       value: BioTorpedo
@@ -216,13 +212,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5149931046150168401, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1138554454783672711, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
-    - {fileID: 5149931046150168401, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
 --- !u!1001 &442021476
 PrefabInstance:
@@ -235,10 +225,6 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 724824869}
-    - target: {fileID: 1292502302, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 4529216016204429046, guid: e5979c711c36aa44c9d3d5550fe594c7, type: 3}
     - target: {fileID: 1458391615630120, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
       propertyPath: m_Name
       value: AlienFighter
@@ -480,10 +466,6 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 724824869}
-    - target: {fileID: 639990430, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 4529216016204429046, guid: e5979c711c36aa44c9d3d5550fe594c7, type: 3}
     - target: {fileID: 1906374043378120, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
       propertyPath: m_Name
       value: BioTorpedo (1)
@@ -678,10 +660,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1234,10 +1216,6 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 724824869}
-    - target: {fileID: 72582323, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 4529216016204429046, guid: e5979c711c36aa44c9d3d5550fe594c7, type: 3}
     - target: {fileID: 1048570700629992, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
       propertyPath: m_Name
       value: AlienDestroyer
@@ -1303,6 +1281,10 @@ PrefabInstance:
       propertyPath: deathFX
       value: 
       objectReference: {fileID: 4529216016204429046, guid: e5979c711c36aa44c9d3d5550fe594c7, type: 3}
+    - target: {fileID: 72582323, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
+      propertyPath: scorePerHit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1048570700629992, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
       propertyPath: m_Name
       value: AlienDestroyer (1)
@@ -1545,7 +1527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e593cbf6d5234d4eaad89c57974b9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePerHit: 12
 --- !u!4 &2093051871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4029445680763570, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
@@ -1588,9 +1569,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963194228}
     m_Modifications:
+    - target: {fileID: 4424667468341877363, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4424667468691528574, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
       propertyPath: m_Name
       value: SpaceShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424667469173169600, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4424667469584294572, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
       propertyPath: m_RootOrder
