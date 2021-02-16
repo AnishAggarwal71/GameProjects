@@ -12,6 +12,7 @@ public class EnemyHandler : MonoBehaviour
 
     ScoreBoard scoreBoard;
     [SerializeField] int scorePerHit = 12;
+    [SerializeField] int hits = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,15 @@ public class EnemyHandler : MonoBehaviour
     }
 
     private void OnParticleCollision(GameObject other)
+    {
+        hits--;
+        if(hits <= 0)
+        {
+            KillEnemy();
+        }
+    }
+
+    private void KillEnemy()
     {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;

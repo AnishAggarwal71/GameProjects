@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     [Tooltip("Along X axis")] [SerializeField] float controlRollFactor = -30f;
     [Tooltip("Along Y axis")][SerializeField] float controlPitchFactor = -20f;
 
+    [SerializeField] GameObject[] guns;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
         if (areControlsEnabled) {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
         
     }
@@ -69,5 +72,33 @@ public class Player : MonoBehaviour
         float roll = xThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach(GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 }

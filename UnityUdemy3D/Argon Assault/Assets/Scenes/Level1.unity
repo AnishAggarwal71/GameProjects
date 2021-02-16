@@ -1073,6 +1073,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 101989659d605a04387dd353b00b3443, type: 3}
+--- !u!1 &1148811517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4424667468341877366, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+  m_PrefabInstance: {fileID: 4424667468961999511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1168380750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1210,11 @@ Transform:
   m_Father: {fileID: 530478814}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1523632170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4424667469173169603, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+  m_PrefabInstance: {fileID: 4424667468961999511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1527595034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1573,6 +1583,30 @@ PrefabInstance:
       propertyPath: CollisionModule.m_Bounce.scalar
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4424667468341877363, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424667468341877366, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: m_Name
+      value: LeftGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424667468341877366, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424667468691528573, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424667468691528573, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 1148811517}
+    - target: {fileID: 4424667468691528573, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 1523632170}
     - target: {fileID: 4424667468691528574, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
       propertyPath: m_Name
       value: SpaceShip
@@ -1580,6 +1614,14 @@ PrefabInstance:
     - target: {fileID: 4424667469173169600, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
       propertyPath: CollisionModule.m_Bounce.scalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424667469173169603, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: m_Name
+      value: RightGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424667469173169603, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4424667469584294572, guid: 44620f70e97e5ec449ec1067a53602d8, type: 3}
       propertyPath: m_RootOrder
